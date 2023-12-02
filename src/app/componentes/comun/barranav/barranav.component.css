@@ -1,0 +1,38 @@
+/* Estilos para el menú de navegación inspirados en Spotify en modo oscuro */
+
+/* Fondo principal del menú de navegación */
+#sidebar {
+    background-color: #040404;
+    color: #ffffff;
+}
+
+/* Estilos para los enlaces de navegación */
+#sidebar .sidebar-nav a {
+    color: #040404;
+}
+
+#sidebar .sidebar-nav a:hover {
+    color: #1db954;
+}
+
+/* Estilos para los íconos de navegación */
+#sidebar .sidebar-nav .bi {
+    color: #ffffff;
+}
+
+/* Estilos para el menú desplegable */
+#sidebar .sidebar-nav .collapse {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Estilos para los íconos de flecha en el menú desplegable */
+#sidebar .sidebar-nav .bi-chevron-down,
+#sidebar .sidebar-nav .bi-chevron-up {
+    color: #ffffff;
+}
+
+/* Estilos para la barra de separación */
+#sidebar .sidebar-nav .dropdown-divider {
+    background-color: #1e1e1e;
+}

@@ -1,0 +1,102 @@
+/* Estilos personalizados para el tema oscuro inspirado en Spotify */
+
+/* Color de fondo principal en modo oscuro */
+body,
+.header,
+.sidebar,
+.main,
+.footer {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Enlaces y botones */
+a,
+.btn {
+    color: #1db954;
+}
+
+a:hover,
+.btn:hover {
+    color: #ffffff;
+    background-color: #1db954;
+    border-color: #1db954;
+}
+
+/* Estilo del breadcrumb */
+.breadcrumb-item {
+    color: #1db954;
+}
+
+.breadcrumb-item.active {
+    color: #ffffff;
+}
+
+/* Estilo de las tarjetas de información en modo oscuro */
+.card {
+    background-color: #1e1e1e;
+    border-color: #1db954;
+    color: #ffffff;
+}
+
+/* Cambia el color del texto de las alertas en modo oscuro */
+.alert {
+    color: #ffffff;
+}
+
+/* Cambia el fondo de las alertas en modo oscuro */
+.alert-primary {
+    background-color: #1db954;
+    border-color: #1db954;
+    color: #ffffff;
+}
+
+/* Cambia el color del fondo de los enlaces de navegación en las tarjetas en modo oscuro */
+.card a {
+    color: #1db954;
+}
+
+/* Cambia el color de fondo del formulario de búsqueda en modo oscuro */
+.search-bar input[type="text"] {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Cambia el color de fondo del botón de búsqueda en el formulario en modo oscuro */
+.search-form button {
+    background-color: #1e1e1e;
+    border-color: #1db954;
+    color: #ffffff;
+}
+
+/* Cambia el color de fondo del botón de búsqueda en dispositivos pequeños en modo oscuro */
+.search-bar-toggle i {
+    color: #ffffff;
+}
+
+/* Cambia el color de fondo de la barra de navegación en modo oscuro */
+.header-nav {
+    background-color: #1e1e1e;
+}
+
+/* Iconos y enlaces del perfil en modo oscuro */
+.nav-profile i,
+.nav-profile span {
+    color: #ffffff;
+}
+
+/* Icono de búsqueda en modo oscuro */
+.search-form button {
+    background-color: #1e1e1e;
+    border-color: #1db954;
+}
+
+/* Icono de tres puntos en modo oscuro */
+.filter a {
+    color: #1db954;
+}
+
+/* Estilo del botón de búsqueda en dispositivos pequeños en modo oscuro */
+.search-bar-toggle i {
+    color: #ffffff;
+}

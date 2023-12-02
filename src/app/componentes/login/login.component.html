@@ -1,0 +1,107 @@
+<main>
+    <div class="container">
+
+        <section class="section register min-vh-100 d-flex flex-column align-items-center justify-content-center py-4">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
+
+                        <div class="d-flex justify-content-center py-4">
+                            <a href="index.html" class="logo d-flex align-items-center w-auto">
+                                <img src="assets/img/logo-nrml.png" alt="">
+                                <span class="d-none d-lg-block">SpotiApp</span>
+                            </a>
+                        </div><!-- End Logo -->
+
+                        <div class="card mb-3">
+
+                            <div class="card-body">
+
+                                <div class="pt-4 pb-2">
+                                    <h5 class="card-title text-center pb-0 fs-4">Inicia sesión en SpotiApp</h5>
+                                    <p class="text-center small">Inicia Sesión y disfruta de la mejor música del mundo
+                                    </p>
+                                </div>
+
+                                <form class="row g-3 needs-validation" novalidate>
+
+                                    <div class="alert alert-danger alert-dismissible fade show" role="alert"
+                                        *ngIf="alerta">
+                                        No se pudo autenticar
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="yourUsername" class="form-label">Email o nombre de usuario</label>
+                                        <div class="input-group has-validation">
+                                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                                            <input type="text" name="username" class="form-control"
+                                                [(ngModel)]="usuario">
+                                            <div class="invalid-feedback">Please enter your username.</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="yourPassword" class="form-label">Contraseña</label>
+                                        <input type="password" name="password" class="form-control" [(ngModel)]="pass">
+                                        <div class="invalid-feedback">Contraseña</div>
+                                    </div>
+
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="remember" value="true"
+                                                id="rememberMe">
+                                            <label class="form-check-label" for="rememberMe">Recordarme</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-primary w-100" (click)="onLogin()">Iniciar
+                                            Sesión</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <p class="small mb-0">¿No tienes cuenta? <a
+                                                href="pages-register.html">Regístrate en SpotiApp</a></p>
+                                    </div>
+                                </form>
+
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+    <div class="credits text-center">
+        Este sitio está protegido y se aplican la Política de Privacidad y los
+        Términos de Servicio de Google. <a href="#">2023</a>
+    </div>
+</main>
+
+
+
+<!-- <div class="login-box">
+    <h2>Login</h2>
+    <form>
+
+       
+        <div class="user-box">
+            <input type="text" name="" required="">
+            <label>Usuario</label>
+        </div>
+        <div class="user-box">
+            <input type="password" name="" required="">
+            <label>Contraseña</label>
+        </div>
+        <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <p-button label="Iniciar Sesión" [rounded]="true" severity="success"> </p-button>
+        </a>
+    </form>
+</div> -->

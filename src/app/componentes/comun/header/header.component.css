@@ -1,0 +1,64 @@
+/* Estilos para la barra de navegación inspirados en Spotify en modo oscuro */
+
+/* Fondo principal de la barra de navegación */
+#header {
+    background-color: #040404;
+    color: #ffffff;
+}
+
+/* Enlace y botón de búsqueda */
+#header a,
+#header button {
+    color: #1db954;
+}
+
+#header a:hover,
+#header button:hover {
+    color: #ffffff;
+}
+
+/* Estilos para el formulario de búsqueda */
+#header .search-form input[type="text"] {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+#header .search-form button {
+    background-color: #1e1e1e;
+    border-color: #1db954;
+    color: #ffffff;
+}
+
+/* Iconos y enlaces del perfil */
+#header .nav-profile i,
+#header .nav-profile span {
+    color: #ffffff;
+}
+
+/* Icono de búsqueda */
+#header .search-bar-toggle i {
+    color: #ffffff;
+}
+
+/* Estilos para el menú desplegable del perfil */
+#header .profile .dropdown-menu {
+    background-color: #040404 !important;
+    color: #ffffff;
+}
+
+.dropdown-menu {
+    background-color: #040404 !important;
+    color: #ffffff;
+}
+
+#header .profile .dropdown-item {
+    color: #ffffff;
+}
+
+#header .profile .dropdown-item:hover {
+    background-color: #1db954;
+}
+
+#header .profile .dropdown-divider {
+    border-color: #1db954;
+}

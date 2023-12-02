@@ -1,0 +1,17 @@
+
+#footer {
+    background-color: #040404;
+    color: #ffffff;
+}
+
+#footer .copyright {
+    color: #ffffff;
+}
+
+#footer .credits a {
+    color: #1db954;
+}
+
+#footer .credits a:hover {
+    color: #ffffff;
+}

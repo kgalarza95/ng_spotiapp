@@ -1,0 +1,77 @@
+/* custom-styles.css */
+body {
+    background-color: #191414;
+    /* Fondo negro característico de Spotify */
+    color: #1DB954;
+    /* Texto verde característico de Spotify */
+}
+
+.register {
+    background-color: #191414 !important;
+    /* Fondo negro para la sección de registro */
+}
+
+.card {
+    background-color: #191414;
+    /* Fondo negro para la tarjeta */
+    color: #ffffff;
+    /* Texto blanco para la tarjeta */
+    border: 1px solid #1DB954;
+    /* Borde verde característico de Spotify */
+}
+
+.card-title {
+    color: #1DB954;
+    /* Texto verde para el título de la tarjeta */
+}
+
+.form-label {
+    color: #ffffff;
+    /* Texto blanco para las etiquetas del formulario */
+}
+
+.form-control {
+    background-color: #0A0A0A;
+    /* Fondo más oscuro para los campos de formulario */
+    color: #ffffff;
+    /* Texto blanco para los campos de formulario */
+    border: 1px solid #1DB954;
+    /* Borde verde característico de Spotify */
+}
+
+.form-control:focus {
+    border-color: #ffffff;
+    /* Cambiar color del borde al enfocar el campo */
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+    /* Sombra al enfocar el campo */
+}
+
+.invalid-feedback {
+    color: #ff0000;
+    /* Color rojo para los mensajes de error */
+}
+
+.btn-primary {
+    color: #ffffff !important;
+    /* Texto blanco para el botón */
+    background-color: #1DB954 !important;
+    /* Fondo verde característico de Spotify para el botón */
+    border-color: #1DB954 !important;
+    /* Borde verde característico de Spotify para el botón */
+}
+
+.btn-primary:hover {
+    color: #ffffff !important;
+    background-color: #0A0A0A !important;
+    border-color: #0A0A0A !important;
+}
+
+.link-spotify {
+    color: #1DB954 !important;
+    /* Texto verde característico de Spotify para los enlaces */
+}
+
+.link-spotify:hover {
+    color: #ffffff !important;
+    /* Texto blanco al pasar el ratón por encima de los enlaces */
+}
