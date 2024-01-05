@@ -1,0 +1,15 @@
+
+<div class="container mt-3">
+  <h2>Listas de Reproducción</h2>
+  <div class="row">
+    <div *ngFor="let lista of listasReproduccion" class="col-md-4 mb-3">
+      <div class="card">
+        <img [src]="lista.images[0].url" class="card-img-top" alt="{{ lista.name }}">
+        <div class="card-body">
+          <h5 class="card-title">{{ lista.name }}</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

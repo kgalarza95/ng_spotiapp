@@ -1,0 +1,52 @@
+<div *ngIf="!artistaSeleccionado" class="container mt-3">
+    <h2>Buscar Artista</h2>
+    <div class="input-group mb-3">
+        <input [(ngModel)]="nombreArtista" placeholder="Nombre del artista" class="form-control" />
+        <button (click)="buscarArtista()" class="btn btn-primary">Buscar</button>
+    </div>
+
+    <div *ngIf="artistas.length > 0">
+        <h3>Resultados:</h3>
+        <div class="row">
+            <div *ngFor="let artista of artistas" class="col-md-4 mb-3">
+                <div class="card" (click)="mostrarDetalles(artista)">
+                    <img [src]="artista.images.length > 0 ? artista.images[0].url : 'ruta_default_imagen.jpg'"
+                        class="card-img-top" alt="Imagen del artista">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ artista.name }}</h5>
+                        <p class="card-text">ID: {{ artista.id }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="artistaSeleccionado" class="container mt-3">
+    <button (click)="volverAtras()" class="btn btn-primary mb-3">Volver atrás</button>
+
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="artistaSeleccionado.images.length > 0 ? artistaSeleccionado.images[0].url : 'ruta_default_imagen.jpg'"
+                class="img-fluid" alt="Imagen del artista">
+        </div>
+        <div class="col-md-8">
+            <h2>{{ artistaSeleccionado.name }}</h2>
+
+            <div>
+                <h3>Información detallada</h3>
+                <ul class="list-group">
+                    <li class="list-group-item"><strong>Spotify URL:</strong> <a
+                            [href]="artistaSeleccionado.external_urls.spotify" target="_blank">{{
+                            artistaSeleccionado.external_urls.spotify }}</a></li>
+                    <li class="list-group-item"><strong>Followers:</strong> {{ artistaSeleccionado.followers.total }}
+                    </li>
+                    <li class="list-group-item"><strong>Géneros:</strong> {{ artistaSeleccionado.genres.join(', ') }}
+                    </li>
+                    <li class="list-group-item"><strong>ID:</strong> {{ artistaSeleccionado.id }}</li>
+                    <li class="list-group-item"><strong>Popularidad:</strong> {{ artistaSeleccionado.popularity }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+/* artista.component.css (o tu archivo de estilos global) */
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Cambia el valor según tus preferencias */
+    transform: translateY(-4px);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+.card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Cambia el valor según tus preferencias */
+    transform: translateY(2px);
+}

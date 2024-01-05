@@ -1,0 +1,20 @@
+<div class="container mt-3">
+    <h2>Buscador de Música</h2>
+    <input [(ngModel)]="terminoBusqueda" placeholder="Buscar música..." class="form-control mb-3">
+    <button (click)="buscarMusica()" class="btn btn-primary">Buscar</button>
+
+    <div class="row">
+        <div *ngFor="let cancion of resultados" class="col-md-4 mb-3">
+            <div class="card">
+                <img [src]="cancion.album.images[0].url" class="card-img-top" alt="{{ cancion.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ cancion.name }}</h5>
+                    <p class="card-text">Artista: {{ cancion.artists[0].name }}</p>
+                    <p class="card-text">Álbum: {{ cancion.album.name }}</p>
+
+                    <button (click)="reproducirCancion(cancion)" class="btn btn-success">Reproducir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

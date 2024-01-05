@@ -12,6 +12,11 @@ import { BarranavComponent } from './componentes/comun/barranav/barranav.compone
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PreloadingComponent } from './componentes/comun/preloading/preloading.component';
+import { ArtistasComponent } from './componentes/paginas/artistas/artistas.component';
+import { PrincipalComponent } from './componentes/paginas/principal/principal.component';
+import { TopTracksComponent } from './componentes/paginas/top-tracks/top-tracks.component';
+import { SpotifyService } from './servicios/spotify.service';
+import { PerfilComponent } from './componentes/paginas/perfil/perfil.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +26,11 @@ import { PreloadingComponent } from './componentes/comun/preloading/preloading.c
     HeaderComponent,
     FooterComponent,
     BarranavComponent,
-    PreloadingComponent
+    PreloadingComponent,
+    ArtistasComponent,
+    PrincipalComponent,
+    TopTracksComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +38,7 @@ import { PreloadingComponent } from './componentes/comun/preloading/preloading.c
     FormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [SpotifyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
