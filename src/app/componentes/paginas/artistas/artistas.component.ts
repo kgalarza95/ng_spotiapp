@@ -9,6 +9,7 @@ import { SpotifyService } from 'src/app/servicios/spotify.service';
   styleUrls: ['./artistas.component.css']
 })
 export class ArtistasComponent {
+  isLoading: boolean = false;
   spotifyUserProfile: SpotifyUserProfile = new SpotifyUserProfile();
   nombreArtista = '';
   artistas: any[] = [];

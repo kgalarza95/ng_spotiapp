@@ -17,6 +17,7 @@ import { PrincipalComponent } from './componentes/paginas/principal/principal.co
 import { TopTracksComponent } from './componentes/paginas/top-tracks/top-tracks.component';
 import { SpotifyService } from './servicios/spotify.service';
 import { PerfilComponent } from './componentes/paginas/perfil/perfil.component';
+import { LoaderComponent } from './componentes/comun/loader/loader.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { PerfilComponent } from './componentes/paginas/perfil/perfil.component';
     ArtistasComponent,
     PrincipalComponent,
     TopTracksComponent,
-    PerfilComponent
+    PerfilComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

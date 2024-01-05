@@ -5,13 +5,14 @@ import { SpotifyService } from 'src/app/servicios/spotify.service';
 @Component({
   selector: 'app-perfil',
   templateUrl: './perfil.component.html',
-  styleUrls: ['./perfil.component.css']
+  styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent {
-  usuario: any; // Objeto que almacenará la información del usuario
+  isLoading: boolean = false;
+  usuario: any;
   listasReproduccion: any[] = [];
 
-  constructor(private spotifyService: SpotifyService) { }
+  constructor(private spotifyService: SpotifyService) {}
 
   ngOnInit(): void {
     this.obtenerInformacionUsuario();
@@ -30,20 +31,26 @@ export class PerfilComponent {
   }
 
   obtenerInformacionUsuario() {
-    this.spotifyService.obtenerPerfilUsuario().pipe(
-      map(data => {
-        data.product = 'libre';
-        return data;
-      })
-    ).subscribe(
-      (usuarioTransformado) => {
-        this.usuario = usuarioTransformado;
-        this.obtenerListasReproduccionPublicas();
-      },
-      (error) => {
-        console.error(error);
-      }
-    );
+    this.isLoading = true;
+    this.spotifyService
+      .obtenerPerfilUsuario()
+      .pipe(
+        map((data) => {
+          data.product = 'libre';
+          return data;
+        })
+      )
+      .subscribe(
+        (usuarioTransformado) => {
+          this.usuario = usuarioTransformado;
+          this.obtenerListasReproduccionPublicas();
+          this.isLoading = false;
+        },
+        (error) => {
+          console.error(error);
+          this.isLoading = false;
+        }
+      );
   }
   obtenerListasReproduccionPublicas() {
     this.spotifyService.obtenerListasReproduccionPublicas().subscribe(

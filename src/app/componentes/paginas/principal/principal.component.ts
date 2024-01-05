@@ -9,6 +9,7 @@ declare const Spotify: any;
   styleUrls: ['./principal.component.css']
 })
 export class PrincipalComponent implements OnInit {
+  isLoading: boolean = false;
   listasReproduccion: any[] = [];
   artistasDestacados: any[] = [];
   albumesPopulares: any[] = [];
