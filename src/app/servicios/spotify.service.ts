@@ -117,7 +117,6 @@ export class SpotifyService {
   }
 
   obtenerPerfilUsuario(): Observable<any> {
-    // Obtiene la información del perfil del usuario
     const url = `${this.apiUrl}/me`;
     const headers = this.getHeaders();
 
@@ -125,7 +124,6 @@ export class SpotifyService {
   }
 
   obtenerListasReproduccionPublicas(): Observable<any> {
-    // Obtiene las listas de reproducción públicas del usuario
     const url = `${this.apiUrl}/me/playlists`;
     const headers = this.getHeaders();
 

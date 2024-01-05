@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { map } from 'rxjs';
 import { SpotifyService } from 'src/app/servicios/spotify.service';
 
 @Component({
@@ -16,7 +17,7 @@ export class PerfilComponent {
     this.obtenerInformacionUsuario();
   }
 
-  obtenerInformacionUsuario() {
+  obtenerInformacionUsuarioObsoleto() {
     this.spotifyService.obtenerPerfilUsuario().subscribe(
       (data) => {
         this.usuario = data;
@@ -28,6 +29,22 @@ export class PerfilComponent {
     );
   }
 
+  obtenerInformacionUsuario() {
+    this.spotifyService.obtenerPerfilUsuario().pipe(
+      map(data => {
+        data.product = 'libre';
+        return data;
+      })
+    ).subscribe(
+      (usuarioTransformado) => {
+        this.usuario = usuarioTransformado;
+        this.obtenerListasReproduccionPublicas();
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
   obtenerListasReproduccionPublicas() {
     this.spotifyService.obtenerListasReproduccionPublicas().subscribe(
       (data) => {
